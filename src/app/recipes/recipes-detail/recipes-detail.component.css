@@ -1,0 +1,8 @@
+.example-card {
+  max-width: 400px;
+}
+
+.example-header-image {
+  background-image: url('https://i.etsystatic.com/17857814/r/il/1d6693/1649763365/il_570xN.1649763365_kngc.jpg');
+  background-size: cover;
+}
