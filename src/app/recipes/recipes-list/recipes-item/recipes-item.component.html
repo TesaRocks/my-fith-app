@@ -1,7 +1,12 @@
-<a class="card" style="width: 12rem; cursor: pointer" (click)="onItem()">
+<a
+  appBackColor
+  [routerLink]="[index]"
+  class="card"
+  style="width: 12rem; cursor: pointer; text-decoration: none; color: maroon"
+>
   <img src="{{ recipe.imagePath }}" alt="{{ recipe.name }}" />
   <div class="card-body">
-    <h5 class="card-title">{{ recipe.name }}</h5>
+    <h3 class="card-title">{{ recipe.name }}</h3>
     <p class="card-text">{{ recipe.description }}</p>
   </div>
 </a>

@@ -15,8 +15,11 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
 import { FlashyDirective } from './shared/flashy.directive';
+import { BackColorDirective } from './shared/backColor.directive';
 import { RecipeService } from './recipes/recipe.service';
 import { ShoppingService } from './shopping/shopping.service';
+import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
+import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,6 +31,9 @@ import { ShoppingService } from './shopping/shopping.service';
     ShoppingComponent,
     ShoppingEditComponent,
     FlashyDirective,
+    BackColorDirective,
+    RecipeStartComponent,
+    RecipeEditComponent,
   ],
   imports: [
     BrowserModule,

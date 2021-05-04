@@ -1,15 +1,16 @@
 <hr style="visibility: hidden" />
 <div class="row">
   <div class="col-12">
-    <button class="btn btn-success">New Recipe</button>
+    <button class="btn btn-success" (click)="onNewRecipe()">New Recipe</button>
   </div>
 </div>
 <hr style="visibility: hidden" />
 <div class="row">
   <div class="col-12">
     <app-recipes-item
-      *ngFor="let rec of recipes"
+      *ngFor="let rec of recipes; let i = index"
       [recipe]="rec"
+      [index]="i"
     ></app-recipes-item>
   </div>
 </div>
