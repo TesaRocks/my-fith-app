@@ -14,6 +14,9 @@ import { ShoppingEditComponent } from './shopping/shopping-edit/shopping-edit.co
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
+import { FlashyDirective } from './shared/flashy.directive';
+import { RecipeService } from './recipes/recipe.service';
+import { ShoppingService } from './shopping/shopping.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,6 +27,7 @@ import { FormsModule } from '@angular/forms';
     RecipesItemComponent,
     ShoppingComponent,
     ShoppingEditComponent,
+    FlashyDirective,
   ],
   imports: [
     BrowserModule,
@@ -33,7 +37,7 @@ import { FormsModule } from '@angular/forms';
     MatCardModule,
     MatButtonModule,
   ],
-  providers: [],
+  providers: [RecipeService, ShoppingService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
