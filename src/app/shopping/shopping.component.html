@@ -5,9 +5,10 @@
     <hr />
     <ul class="list-group">
       <li
-        *ngFor="let ing of ingredients"
+        *ngFor="let ing of ingredients; let i = index"
         class="list-group-item d-flex justify-content-between align-items-center"
         style="cursor: pointer; max-width: 200px"
+        (click)="onEditItem(i)"
       >
         {{ ing.name }}
         <span class="badge bg-primary rounded-pill">{{ ing.amount }}</span>
