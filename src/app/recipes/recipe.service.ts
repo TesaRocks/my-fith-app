@@ -7,21 +7,13 @@ import { Recipe } from './recipe.model';
 @Injectable()
 export class RecipeService {
   recipesChanged = new Subject<Recipe[]>();
-  private recipes: Recipe[] = [
-    new Recipe(
-      'Milanesa',
-      'the best in town',
-      'https://cdn.kiwilimon.com/recetaimagen/1654/13219.jpg',
-      [new Ingredient('meat', 1), new Ingredient('bread', 3)]
-    ),
-    new Recipe(
-      'Pizza',
-      'the best in town',
-      'https://mahatmarice.com/wp-content/uploads/2020/04/Rice-Pizza-Crust.jpg',
-      [new Ingredient('meat', 1), new Ingredient('flour', 3)]
-    ),
-  ];
+  private recipes: Recipe[] = [];
   constructor(private shoppingService: ShoppingService) {}
+  setRecipes(recipes: Recipe[]) {
+    this.recipes = recipes;
+    this.recipesChanged.next(this.recipes.slice());
+  }
+
   getRecipes() {
     return this.recipes.slice();
   }

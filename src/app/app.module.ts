@@ -20,6 +20,8 @@ import { RecipeService } from './recipes/recipe.service';
 import { ShoppingService } from './shopping/shopping.service';
 import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
 import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AuthComponent } from './auth/auth.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,6 +36,7 @@ import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component
     BackColorDirective,
     RecipeStartComponent,
     RecipeEditComponent,
+    AuthComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,6 +46,7 @@ import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component
     BrowserAnimationsModule,
     MatCardModule,
     MatButtonModule,
+    HttpClientModule,
   ],
   providers: [RecipeService, ShoppingService],
   bootstrap: [AppComponent],
