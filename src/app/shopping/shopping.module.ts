@@ -13,7 +13,7 @@ import { MatButtonModule } from '@angular/material/button';
   imports: [
     RouterModule.forChild([
       {
-        path: 'shopping',
+        path: '',
         component: ShoppingComponent,
         canActivate: [AuthGuard],
       },
